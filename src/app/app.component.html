@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+table td#ROW1  {background-color:red; color:white;}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<br>
+<p align="center">Fill the numbers in the textbox and click on start</p>
+<br>
+<table border="3" align="center">
+<tbody>
+<tr>
+<td contenteditable='false' onclick="style='background-color:red'">&nbsp;&nbsp;B&nbsp;</td>
+<td  contenteditable='false' onclick="style='background-color:red'">&nbsp;&nbsp;I&nbsp;&nbsp;</td>
+<td contenteditable='false' onclick="style='background-color:red'">&nbsp;&nbsp;N&nbsp;</td>
+<td contenteditable='false' onclick="style='background-color:red'">&nbsp;&nbsp;G&nbsp;</td>
+<td contenteditable='false' onclick="style='background-color:red'">&nbsp;&nbsp;O&nbsp;</td>
+
+</tr>
+<tr>
+<td contenteditable= 'false' onclick="style='background-color:blue'"> &nbsp;{{val[0]}} </td>
+<td contenteditable= 'false' onclick="style='background-color:blue'">&nbsp;{{val[1]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[2]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[3]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[4]}} </td>
+
+</tr>
+<tr>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[5]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[6]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[7]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[8]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[9]}} </td>
+</tr>
+<tr>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[10]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[11]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[12]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[13]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[14]}} </td>
+
+</tr>
+<tr>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[15]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[16]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[17]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[18]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[19]}} </td>
+</tr>
+<tr>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[20]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[21]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[22]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[23]}} </td>
+<td contenteditable='false' onclick="style='background-color:blue'">&nbsp;{{val[24]}} </td>
+
+</tr>
+</tbody>
+</table>
+<br>
+<div align="center">
+<input  *ngIf="flag" [(ngModel)]=buf maxlength="2" size="2" >
+&nbsp;&nbsp;&nbsp;<button *ngIf="flag" (click)="hel()" >Next 
+</button>
+</div> 
+<br>
+<div align="center">
+<button (click)="change()" >Start the game </button>
+</div>
+</body>
+</html>
+
+<router-outlet></router-outlet>
