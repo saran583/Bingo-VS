@@ -135,7 +135,7 @@ table, th, td {
 </table>
 <br>
 <div align="center">
-<input  *ngIf="flag" [(ngModel)]=buf maxlength="2" size="2" >
+<input  *ngIf="flag" [(ngModel)]="buf" maxlength="2" size="2" >
 &nbsp;&nbsp;&nbsp;<button *ngIf="flag" (click)="hel()" >Next 
 </button>
 </div> 
